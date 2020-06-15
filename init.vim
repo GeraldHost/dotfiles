@@ -17,6 +17,7 @@ set shiftwidth=2
 set expandtab
 set nowrap
 set number
+set mouse=a
 
 syntax on
 colorscheme dracula 
