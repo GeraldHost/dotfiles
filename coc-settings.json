@@ -1,3 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "jsx", "ts", "tsx"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "jsx", "ts", "tsx"],
+  "python.pythonPath": "python3"
 }
