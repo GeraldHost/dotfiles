@@ -7,17 +7,30 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
+Plug 'evanleck/vim-svelte'
 call plug#end()
 
 map <C-p> :FZF<CR>
-vmap '' :w !pbcopy<CR><CR>
 
-set tabstop=2
-set shiftwidth=2
+vmap '' :w !pbcopy<CR>
+set clipboard=unnamed
+
+" map jj to esc
+imap ;; <Esc>
+
 set expandtab
 set nowrap
 set number
 set mouse=a
+
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 syntax on
 colorscheme dracula 
@@ -29,6 +42,7 @@ let g:coc_global_extentions = [
   \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+command! -nargs=0 P :CocCommand prettier.formatFile
 nmap <leader>f  <Plug>(coc-format-selected)
 " SETTINGS FOR COC "
 " i" TextEdit might fail if hidden is not set.
